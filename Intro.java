@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
 //import java.util.*;
 //PascalCase - CadaPalabraVaConMayuscula. Nombres de archivos y nombres de clases
 public class Intro {
@@ -144,7 +146,53 @@ public class Intro {
             inicio++;
             fin--;
         }
+        /*
+        {
+            "nombre": "Elena",
+            "apellido": "De Troya",
+            "email": "elena@codingdojo.com"
+        }
+        */
+        HashMap<String, String> estudiante1 = new HashMap<String, String>();
+        /*
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingresa tu nombre:");
+        String a = input.nextLine();
+        estudiante1.put("nombre", a);
+         */
+        estudiante1.put("nombre", "Elena");
+        estudiante1.put("apellido", "De Troya");
+        estudiante1.put("email", "elena@codingdojo.com");
+        estudiante1.put("id", "8129839");
 
+        System.out.println(estudiante1.get("nombre"));
+
+        HashMap<String, String> usuarios = new HashMap<String, String>();
+        usuarios.put("elena@codingdojo.com", "Elena de Troya");
+        usuarios.put("juana@codingdojo.com", "Juana de Arco");
+        usuarios.put("pedro@codingdojo.com", "Pedro Paramo");
+
+        System.out.println(usuarios.get("pedro@codingdojo.com"));
+
+        Set<String> claves = usuarios.keySet();
+        /*
+        claves = {"elena@codingdojo.com", "juana@codingdojo.com", "pedro@codingdojo.com"}
+        clave = "elena@codingdojo.com"
+        elena@codingdojo.com
+        Elena de Troya
+        --
+        clave = "juana@codingdojo.com"
+        juana@codingdojo.com
+        Juana de Arco
+        --
+        clave = "pedro@codingdojo.com"
+        pedro@codingdojo.com
+        Pedro Paramo
+         */
+        for(String clave: claves) {
+            System.out.println(clave);
+            System.out.println(usuarios.get(clave));
+        }
 
     }
 
