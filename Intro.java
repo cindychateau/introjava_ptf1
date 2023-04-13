@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+//import java.util.*;
 //PascalCase - CadaPalabraVaConMayuscula. Nombres de archivos y nombres de clases
 public class Intro {
 
@@ -47,6 +49,103 @@ public class Intro {
         System.out.println(resultadoImpresion);
 
         impresion2();
+
+
+        //Arreglos - Es una variable en la cual podemos agregar más de un valor es distintas posiciones.
+        int[] miArreglo; //Declaración
+        miArreglo = new int[5]; //Inicialización     
+        miArreglo[0] = 4;
+        miArreglo[1] = 8;
+        miArreglo[2] = 8;
+        miArreglo[3] = 5;
+        miArreglo[4] = 9;
+
+        //miArreglo[5] = 1;
+
+        System.out.println(miArreglo[2]);
+
+        int[] miArreglo2 = {4, 8, 8, 5, 9};
+        
+        //miArreglo2[5] = 1;
+
+        System.out.println(miArreglo2[2]);
+        
+        ArrayList<Integer> miArreglo3 = new ArrayList<Integer>();
+        miArreglo3.add(10);
+        System.out.println(miArreglo3.get(0)); //actúa como posición -> [0]
+
+        //Condicionales y Operadores
+        boolean llueve = false;
+        boolean soleado = true;
+
+        if(llueve) {
+            System.out.println("Lleva paraguas.");
+        } else {
+            System.out.println("Disfruta de tu día!");
+        }
+
+        if(llueve) {
+            System.out.println("Lleva un paraguas");
+        } else if(soleado) {
+            System.out.println("Ponte bloqueador");
+        } else {
+            System.out.println("Vamos al parque!");
+        }
+
+        llueve = true;
+        if(llueve && soleado) { //Ambos son verdadero
+            System.out.println("Busca un arcoiris en el cielo");
+        }
+
+        /*
+        i = 0
+        alo?
+        i = 1
+        alo?
+        i = 2
+        alo?
+        i = 3
+        alo?
+        i = 4
+        alo?
+        i = 5
+        alo?
+        i = 6
+        alo?
+        i = 7
+         */
+        for(int i=0; i < 7; i++) {
+            System.out.println("alo?");
+        }
+
+        /*
+        j = 0
+        ciao!
+        j = 2
+        ciao!
+        j = 4
+        ciao!
+        j = 6
+        ciao!
+        j = 8
+        ciao!
+        j = 10
+         */
+        int j = 0;
+        while(j < 10) {
+            System.out.println("ciao!");
+            j += 2;
+        }
+
+        int inicio = 0;
+        int fin = 10;
+        while(inicio < fin) {
+            System.out.println("bye");
+            inicio++;
+            fin--;
+        }
+
+
     }
 
     // Tipo de función: public, private, protected
