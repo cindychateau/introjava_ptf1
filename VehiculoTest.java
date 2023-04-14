@@ -45,6 +45,10 @@ class VehiculoTest {
         
         auto2.acelera();
 
+        Vehiculo.sonidoAuto();
+
+        System.out.println(Vehiculo.cantidadVehiculos);
+
     }
 
 }

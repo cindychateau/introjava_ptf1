@@ -7,9 +7,11 @@ class Vehiculo {
     private String color;
     private int ruedas;
 
+    public static int cantidadVehiculos = 0; //Mi variable estática NO pertenece a una instancia, sino pertenece a la clase.
+
     /*Constructor - Inicializa un objeto */
     public Vehiculo() {
-
+        cantidadVehiculos++;
     }
 
     /*Múltiples constructores - SOBRECARGA */
@@ -19,6 +21,7 @@ class Vehiculo {
     "*/
     public Vehiculo(String color) {
         this.color = color;   
+        cantidadVehiculos++;
     }
 
     /*
@@ -30,10 +33,12 @@ class Vehiculo {
     public Vehiculo(String color, String marca) {
         this.color = color;
         this.marca = marca;
+        cantidadVehiculos++;
     }
 
     public Vehiculo(int ruedas) {
         this.ruedas = ruedas;
+        cantidadVehiculos++;
     }
 
     public void acelera() {
@@ -63,6 +68,7 @@ class Vehiculo {
         return this.marca;
     }
 
+    /*camelCase - empiezaConMinuscula */
     public void setMarca(String marca){
         this.marca = marca;
     }
@@ -89,6 +95,10 @@ class Vehiculo {
 
     public void setRuedas(int ruedas) {
         this.ruedas = ruedas;
+    }
+
+    public static void sonidoAuto() {
+        System.out.println("rum rum");
     }
 
 }
